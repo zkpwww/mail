@@ -258,6 +258,7 @@
     flex-direction: column;
     justify-content: space-between;
     min-height: .7rem;
+    flex: 1;
 }
 
 .k-bshop-item{
