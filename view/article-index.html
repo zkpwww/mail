@@ -51,5 +51,14 @@
   </a>
 </div>
 
+<script src="../js/jquery-2.1.4.min.js"></script>
+<script>
+  $(function () {
+    $(".k-article-nav").delegate( "li", "click",function() {
+      $('.k-in').removeClass('k-in');
+      $(this).addClass('k-in');
+    });
+  })
+</script>
 </body>
 </html>
