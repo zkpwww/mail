@@ -49,7 +49,8 @@
       </li>
 
       <!-- 登录后的状态 -->
-      <!--<li class="layui-nav-item">
+      <!--
+       <li class="layui-nav-item">
         <a class="fly-nav-avatar" href="javascript:;">
           <cite class="layui-hide-xs">贤心</cite>
           <img src="https://tva1.sinaimg.cn/crop.0.0.118.118.180/5db11ff4gw1e77d3nqrv8j203b03cweg.jpg">
@@ -103,7 +104,7 @@
 
       <!--轮播图-->
       <div class="fly-panel layui-hide-xs">
-        <div class="layui-row fly-panel-main" style="padding: 15px;height: 140px;">
+        <div class="layui-row fly-panel-main">
           <div class="layui-carousel fly-banner" id="topBanner">
             <div carousel-item>
               <a href="#">
@@ -406,58 +407,8 @@
   </p>
 </div>
 
-<script src="../plugin/layui/layui.all.js"></script>
-<script>
-  ;!function () {
-    var $ = layui.$;//内置jQuery
-
-    //轮播图
-    var carousel = layui.carousel;
-    carousel.render({
-      elem: '#topBanner',
-      height: '140px',
-      width: '100%',
-      arrow: 'hover',
-      anim: 'fade'
-    });
-
-    //弹出搜索框
-    var layer = layui.layer;
-    $('.fly-search').on('click', function () {
-      layer.open({
-        type: 1,
-        title: false,
-        closeBtn: false,
-        shadeClose: true,
-        maxWidth: 10000,
-        skin: 'fly-layer-search',
-        content: ['<form action="http://cn.bing.com/search">', '<input autocomplete="off" placeholder="搜索内容，回车跳转" type="text" name="q">', '</form>'].join(''),
-        success: function (layero) {
-          var input = layero.find('input');
-          input.focus();
-          layero.find('form').submit(function () {
-            var val = input.val();//input的值
-            if (val.replace(/\s/g, '') === '') {
-              return false;//为空则返回
-            }
-            input.val('site:layui.com ' + input.val());
-          });
-        }
-      })
-    });
-
-    //回到顶部
-    $('.fly-go-top').on('click', function () {
-      $('html , body').animate({scrollTop: 0}, 'fast');
-    });
-
-    //返回上一页
-    $('.fly-go-back').on('click', function () {
-      window.history.go(-1);
-    });
-
-  }();
-</script>
+<script src="../plugin/layui/layui.js"></script>
+<script src="../js/common.js"></script>
 
 </body>
 </html>
