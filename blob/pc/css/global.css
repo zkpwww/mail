@@ -197,6 +197,9 @@ pre{padding: 10px 15px; margin: 10px 0; font-size: 12px; border-left: 6px solid 
 .fly-banner .layui-carousel-ind{top: -25px;}
 .fly-banner .layui-carousel-ind ul{background: none;}
 .fly-banner .layui-carousel-ind ul li{width: 25px; height: 3px; border-radius: 0;}
+.fly-us-code{padding: 20px 0; text-align: center;}
+.fly-us-code img{max-width: 100%}
+.fly-us-code p{position: relative; color: #666;}
 
 
 /* 专栏 */
@@ -378,7 +381,7 @@ body .layui-edit-face  .layui-layer-content{padding:0; background-color:#fff; co
 .jieda-admin{position:absolute; right: 0; top: 4px;}
 
 /* 回答 */
-.jieda{margin-bottom: 30px;}
+.jieda{}
 .jieda li{position: relative; padding: 20px 0 10px; border-bottom: 1px dotted #DFDFDF;}
 .jieda li:last-child{border-bottom: none;}
 .jieda .fly-none{height: 50px; min-height: 0;}
