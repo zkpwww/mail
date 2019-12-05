@@ -102,6 +102,7 @@ pre{padding: 10px 15px; margin: 10px 0; font-size: 12px; border-left: 6px solid 
 .fly-link{color: #01AAED;}
 .fly-link:hover{color: #5FB878;}
 .fly-grey{color: #999;}
+.fly-blue{color: #0db3b8}
 
 .fly-msg, .fly-error{padding: 10px 15px; line-height: 24px;}
 .fly-msg{background-color:#F8F8F8; color:#666;}
@@ -437,6 +438,10 @@ body .fly-user-main{position: relative; min-height: 600px;}
 .fly-home-jie .jie-row,
 .fly-home-da .home-jieda{min-height: 500px; padding: 5px 20px;}
 
+/*收藏icon*/
+.fly-collect-icon{font-size: 26px!important; color: #ff7997!important;margin-right: 10px;}
+.fly-news-collect-icon{font-size: 20px!important; color: #ff7997!important;vertical-align: -1.5px;margin-left: 5px;}
+
 /*.home-jieda li{margin-bottom:20px; padding-bottom:10px; line-height:24px; border-bottom: 1px dotted #DFDFDF;}*/
 .home-jieda li{ margin-bottom:20px; line-height:24px;}
 .home-dacontent{margin-top:10px; padding:10px 15px; background-color:#F2F2F5; border-radius:5px; word-wrap: break-word;;}
@@ -514,12 +519,16 @@ body .fly-user-main{position: relative; min-height: 600px;}
 .fly-link a{line-height: 24px; padding-right: 15px;}
 
 /*广告文章*/
-.fly-detail-news{background: white;padding: 20px;}
+.fly-detail-news{background: white;padding: 20px;min-height: 500px;}
 .fly-detail-news-title{text-align: center}
-.fly-detail-news-msg{line-height: 40px;color: #666;}
+.fly-detail-news-msg{line-height: 25px;color: #666;margin-top: 10px;}
 .fly-detail-news-msg span{display: inline-block;margin: 0 5px;}
 .fly-detail-news-content{font-size: 16px;line-height: 30px;padding: 20px 0}
 .fly-detail-news-content img{max-width: 100%}
+.fly-news-footer{min-height: 60px;}
+.fly-news-pay{float: left;}
+.fly-news-pay span{width: 300px;display: inline-block;line-height: 25px;margin-right: 10px;}
+.fly-news-pay img{width: 60px;height: 60px;margin-right: 10px;vertical-align: top}
 
 /* 404或提示 */
 .fly-none{min-height: 600px; text-align: center; padding-top:50px; color: #999;}

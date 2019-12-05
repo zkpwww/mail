@@ -109,16 +109,29 @@ layui.define(['layer', 'laytpl', 'element', 'carousel'], function (exports) {
   });
 
 
-  //取消收藏
+  //个人中心 - 取消收藏
   $('.fly-collect-box .layui-icon').on('click', function () {
     $(this).parent().remove();
-
     // 发送指令、取消收藏
     request('post','url',{id:'1'},function (res) {
       console.log('删除啦');
     })
   });
 
+  //文章页面
+  //收藏和取消收藏
+  $('.fly-news-collect-icon').on('click',function () {
+    if($(this).is('.layui-icon-rate')){
+      // 收藏
+      $(this).removeClass('layui-icon-rate').addClass('layui-icon-rate-solid');
+      // 发送指令
+    }else {
+      //取消收藏
+      $(this).removeClass('layui-icon-rate-solid').addClass('layui-icon-rate');
+      // 发送指令
+    }
+
+  });
 
   exports('fly');
 
