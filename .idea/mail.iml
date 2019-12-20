@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="WEB_MODULE" version="4">
+  <component name="NewModuleRootManager">
+    <content url="file://$MODULE_DIR$">
+      <excludeFolder url="file://$MODULE_DIR$/blogs/vendor/composer" />
+      <excludeFolder url="file://$MODULE_DIR$/blogs/vendor/doctrine/cache" />
+      <excludeFolder url="file://$MODULE_DIR$/blogs/vendor/endroid/qr-code" />
+      <excludeFolder url="file://$MODULE_DIR$/blogs/vendor/guzzlehttp/guzzle" />
+      <excludeFolder url="file://$MODULE_DIR$/blogs/vendor/guzzlehttp/promises" />
+      <excludeFolder url="file://$MODULE_DIR$/blogs/vendor/guzzlehttp/psr7" />
+      <excludeFolder url="file://$MODULE_DIR$/blogs/vendor/karsonzhang/fastadmin-addons" />
+      <excludeFolder url="file://$MODULE_DIR$/blogs/vendor/markbaker/complex" />
+      <excludeFolder url="file://$MODULE_DIR$/blogs/vendor/markbaker/matrix" />
+      <excludeFolder url="file://$MODULE_DIR$/blogs/vendor/monolog/monolog" />
+      <excludeFolder url="file://$MODULE_DIR$/blogs/vendor/mtdowling/cron-expression" />
+      <excludeFolder url="file://$MODULE_DIR$/blogs/vendor/overtrue/pinyin" />
+      <excludeFolder url="file://$MODULE_DIR$/blogs/vendor/overtrue/socialite" />
+      <excludeFolder url="file://$MODULE_DIR$/blogs/vendor/overtrue/wechat" />
+      <excludeFolder url="file://$MODULE_DIR$/blogs/vendor/paragonie/random_compat" />
+      <excludeFolder url="file://$MODULE_DIR$/blogs/vendor/phpmailer/phpmailer" />
+      <excludeFolder url="file://$MODULE_DIR$/blogs/vendor/phpoffice/phpspreadsheet" />
+      <excludeFolder url="file://$MODULE_DIR$/blogs/vendor/pimple/pimple" />
+      <excludeFolder url="file://$MODULE_DIR$/blogs/vendor/psr/container" />
+      <excludeFolder url="file://$MODULE_DIR$/blogs/vendor/psr/http-message" />
+      <excludeFolder url="file://$MODULE_DIR$/blogs/vendor/psr/log" />
+      <excludeFolder url="file://$MODULE_DIR$/blogs/vendor/psr/simple-cache" />
+      <excludeFolder url="file://$MODULE_DIR$/blogs/vendor/ralouphie/getallheaders" />
+      <excludeFolder url="file://$MODULE_DIR$/blogs/vendor/symfony/http-foundation" />
+      <excludeFolder url="file://$MODULE_DIR$/blogs/vendor/symfony/options-resolver" />
+      <excludeFolder url="file://$MODULE_DIR$/blogs/vendor/symfony/polyfill-mbstring" />
+      <excludeFolder url="file://$MODULE_DIR$/blogs/vendor/symfony/polyfill-php70" />
+      <excludeFolder url="file://$MODULE_DIR$/blogs/vendor/symfony/psr-http-message-bridge" />
+      <excludeFolder url="file://$MODULE_DIR$/blogs/vendor/topthink/think-captcha" />
+      <excludeFolder url="file://$MODULE_DIR$/blogs/vendor/topthink/think-installer" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>

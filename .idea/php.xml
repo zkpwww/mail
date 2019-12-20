@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PhpIncludePathManager">
+    <include_path>
+      <path value="$PROJECT_DIR$/blogs/vendor/karsonzhang/fastadmin-addons" />
+      <path value="$PROJECT_DIR$/blogs/vendor/paragonie/random_compat" />
+      <path value="$PROJECT_DIR$/blogs/vendor/markbaker/complex" />
+      <path value="$PROJECT_DIR$/blogs/vendor/phpoffice/phpspreadsheet" />
+      <path value="$PROJECT_DIR$/blogs/vendor/monolog/monolog" />
+      <path value="$PROJECT_DIR$/blogs/vendor/endroid/qr-code" />
+      <path value="$PROJECT_DIR$/blogs/vendor/pimple/pimple" />
+      <path value="$PROJECT_DIR$/blogs/vendor/composer" />
+      <path value="$PROJECT_DIR$/blogs/vendor/ralouphie/getallheaders" />
+      <path value="$PROJECT_DIR$/blogs/vendor/markbaker/matrix" />
+      <path value="$PROJECT_DIR$/blogs/vendor/guzzlehttp/psr7" />
+      <path value="$PROJECT_DIR$/blogs/vendor/phpmailer/phpmailer" />
+      <path value="$PROJECT_DIR$/blogs/vendor/guzzlehttp/promises" />
+      <path value="$PROJECT_DIR$/blogs/vendor/guzzlehttp/guzzle" />
+      <path value="$PROJECT_DIR$/blogs/vendor/psr/container" />
+      <path value="$PROJECT_DIR$/blogs/vendor/psr/http-message" />
+      <path value="$PROJECT_DIR$/blogs/vendor/symfony/psr-http-message-bridge" />
+      <path value="$PROJECT_DIR$/blogs/vendor/symfony/polyfill-php70" />
+      <path value="$PROJECT_DIR$/blogs/vendor/symfony/polyfill-mbstring" />
+      <path value="$PROJECT_DIR$/blogs/vendor/symfony/http-foundation" />
+      <path value="$PROJECT_DIR$/blogs/vendor/symfony/options-resolver" />
+      <path value="$PROJECT_DIR$/blogs/vendor/topthink/think-installer" />
+      <path value="$PROJECT_DIR$/blogs/vendor/doctrine/cache" />
+      <path value="$PROJECT_DIR$/blogs/vendor/topthink/think-captcha" />
+      <path value="$PROJECT_DIR$/blogs/vendor/psr/log" />
+      <path value="$PROJECT_DIR$/blogs/vendor/psr/simple-cache" />
+      <path value="$PROJECT_DIR$/blogs/vendor/overtrue/wechat" />
+      <path value="$PROJECT_DIR$/blogs/vendor/overtrue/socialite" />
+      <path value="$PROJECT_DIR$/blogs/vendor/overtrue/pinyin" />
+      <path value="$PROJECT_DIR$/blogs/vendor/mtdowling/cron-expression" />
+    </include_path>
+  </component>
+</project>
