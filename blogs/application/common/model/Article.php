@@ -3,15 +3,15 @@
  * Created by PhpStorm.
  * User: Administrator
  * Date: 2019/12/24
- * Time: 15:33
+ * Time: 18:01
  */
 
-namespace app\admin\model;
+namespace app\common\model;
 
 
 use think\Model;
 
-class ArticleCategory extends Model
+class Article extends Model
 {
     // 开启自动写入时间戳字段
     protected $autoWriteTimestamp = 'int';
@@ -22,5 +22,10 @@ class ArticleCategory extends Model
     public function getNameAttr($value, $data)
     {
         return __($value);
+    }
+
+    public function ArticleCategory()
+    {
+        return $this->belongsTo('ArticleCategory','category_id','id','','LEFT')->setEagerlyType(0);
     }
 }

@@ -3,15 +3,15 @@
  * Created by PhpStorm.
  * User: Administrator
  * Date: 2019/12/24
- * Time: 18:01
+ * Time: 15:33
  */
 
-namespace app\admin\model;
+namespace app\common\model;
 
 
 use think\Model;
 
-class Article extends Model
+class ArticleCategory extends Model
 {
     // 开启自动写入时间戳字段
     protected $autoWriteTimestamp = 'int';
