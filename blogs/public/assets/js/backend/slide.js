@@ -5,12 +5,11 @@ define(['jquery', 'bootstrap', 'backend', 'table', 'form'], function ($, undefin
             // 初始化表格参数配置
             Table.api.init({
                 extend: {
-                    index_url: 'article/article/index',
-                    add_url: 'article/article/add',
-                    edit_url: 'article/article/edit',
-                    del_url: 'article/article/del',
-                    multi_url: 'article/article/multi',
-                    table: 'category',
+                    index_url: 'slide/index',
+                    add_url: 'slide/add',
+                    edit_url: 'slide/edit',
+                    del_url: 'slide/del',
+                    table: 'slide_show',
                 }
             });
 
@@ -22,19 +21,12 @@ define(['jquery', 'bootstrap', 'backend', 'table', 'form'], function ($, undefin
                 pagination: false,
                 commonSearch: false,
                 search: false,
-                queryParams:function(params){
-                    params.sort = 'article.is_top desc,article.weigh desc,article.id desc';
-                    return params;
-                },
                 columns: [
                     [
                         {checkbox: true},
                         {field: 'id', title: __('Id')},
-                        {field: 'title', title: __('文章标题'), align: 'left'},
-                        {field: 'article_category.name', title: __('文章类别')},
-                        {field: 'is_top', title: __('是否置顶'), searchList: {"1": __('Yes'), "0": __('No')}, formatter: Table.api.formatter.toggle},
-                        {field: 'virtual_view', title: __('虚拟点击量')},
-                        {field: 'actual_view', title: __('实际点击量'), operate: false, events: Table.api.events.image, formatter: Table.api.formatter.image},
+                        {field: 'name', title: __('Name'), align: 'left'},
+                        {field: 'url', title: __('图片'), operate: false, events: Table.api.events.image, formatter: Table.api.formatter.image},
                         {field: 'status', title: __('Status'), operate: false, formatter: Table.api.formatter.status},
                         {field: 'operate', title: __('Operate'), table: table, events: Table.api.events.operate, formatter: Table.api.formatter.operate}
                     ]
@@ -45,15 +37,19 @@ define(['jquery', 'bootstrap', 'backend', 'table', 'form'], function ($, undefin
 
             // 为表格绑定事件
             Table.api.bindevent(table);
+
+
         },
         add: function () {
             Controller.api.bindevent();
+
         },
         edit: function () {
             Controller.api.bindevent();
         },
         api: {
             bindevent: function () {
+
                 Form.api.bindevent($("form[role=form]"));
             }
         }

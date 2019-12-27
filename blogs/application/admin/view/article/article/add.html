@@ -40,7 +40,7 @@
     <div class="form-group">
         <label class="control-label col-xs-12 col-sm-2">{:__('是否置顶')}:</label>
         <div class="col-xs-12 col-sm-8">
-            {:build_radios('row[is_top]', ['1'=>__('是'), '0'=>__('否')], '')}
+            {:Form::switcher('row[is_top]', 0, ['color'=>'success'])}
         </div>
     </div>
     <div class="form-group">

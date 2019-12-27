@@ -39,13 +39,13 @@ class Article extends Backend
             $total = $this->model
                 ->with('ArticleCategory')
                 ->where($where)
-                ->order($sort, $order)
+                ->order($sort)
                 ->count();
 
             $list = $this->model
                 ->with('ArticleCategory')
                 ->where($where)
-                ->order($sort, $order)
+                ->order($sort)
                 ->limit($offset, $limit)
                 ->select();
 

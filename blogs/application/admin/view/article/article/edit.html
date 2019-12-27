@@ -40,13 +40,13 @@
     <div class="form-group">
         <label class="control-label col-xs-12 col-sm-2">{:__('是否置顶')}:</label>
         <div class="col-xs-12 col-sm-8">
-            {:build_radios('row[is_top]', ['1'=>__('是'), '0'=>__('否')], $row['is_top'])}
+            {:Form::switcher('row[is_top]', $row['is_top'], ['color'=>'success'])}
         </div>
     </div>
     <div class="form-group">
         <label for="c-content" class="control-label col-xs-12 col-sm-2">{:__('内容')}:</label>
         <div class="col-xs-12 col-sm-8">
-            <textarea  class="form-control editor" name="row[content]"  id="c-content"></textarea>
+            <textarea  class="form-control editor" name="row[content]"  id="c-content">{$row.content}</textarea>
         </div>
     </div>
     <div class="form-group layer-footer">
