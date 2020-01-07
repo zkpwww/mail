@@ -24,6 +24,7 @@ class Article extends Backend
         $this->model = model('Article');
         $this->categoryLogic = new ArticleCategory();
         $this->view->assign("parentList", $this->categoryLogic->categorydata);
+        $this->view->assign('typeList', $this->model->typeList);
     }
     /**
      * 查看

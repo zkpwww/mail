@@ -19,9 +19,25 @@ class Article extends Model
     protected $createTime = 'createtime';
     protected $updateTime = 'updatetime';
 
+    protected $append = [
+        'type_text'
+    ];
+
+    public $typeList = [
+        1 => '普通文章',
+        2 => '重点推荐',
+        3 => '热门软件',
+        4 => '友情链接',
+    ];
+
     public function getNameAttr($value, $data)
     {
         return __($value);
+    }
+
+    public function getTypeTextAttr($value, $data)
+    {
+        return isset($data['type']) ? $this->typeList[$data['type']] : '--';
     }
 
     public function ArticleCategory()

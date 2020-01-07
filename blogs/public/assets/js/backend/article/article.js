@@ -34,7 +34,8 @@ define(['jquery', 'bootstrap', 'backend', 'table', 'form'], function ($, undefin
                         {field: 'article_category.name', title: __('文章类别')},
                         {field: 'is_top', title: __('是否置顶'), searchList: {"1": __('Yes'), "0": __('No')}, formatter: Table.api.formatter.toggle},
                         {field: 'virtual_view', title: __('虚拟点击量')},
-                        {field: 'actual_view', title: __('实际点击量'), operate: false, events: Table.api.events.image, formatter: Table.api.formatter.image},
+                        {field: 'actual_view', title: __('实际点击量'), operate: false},
+                        {field: 'type_text', title: __('文章类型'), operate: false},
                         {field: 'status', title: __('Status'), operate: false, formatter: Table.api.formatter.status},
                         {field: 'operate', title: __('Operate'), table: table, events: Table.api.events.operate, formatter: Table.api.formatter.operate}
                     ]
