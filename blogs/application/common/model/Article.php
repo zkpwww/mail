@@ -18,6 +18,13 @@ class Article extends Model
     // 定义时间戳字段名
     protected $createTime = 'createtime';
     protected $updateTime = 'updatetime';
+    //类型转换
+    protected $type = [
+        'createtime'        =>  'timestamp:Y-m-d H:i:s',
+        'updatetime'        =>  'timestamp:Y-m-d H:i:s',
+    ];
+
+    protected $insert = [];
 
     protected $append = [
         'type_text'
@@ -35,6 +42,11 @@ class Article extends Model
         return __($value);
     }
 
+    public function setInsert($admin_id)
+    {
+        $this->insert['admin_id'] = $admin_id;
+    }
+
     public function getTypeTextAttr($value, $data)
     {
         return isset($data['type']) ? $this->typeList[$data['type']] : '--';
@@ -43,5 +55,10 @@ class Article extends Model
     public function ArticleCategory()
     {
         return $this->belongsTo('ArticleCategory','category_id','id','','LEFT')->setEagerlyType(0);
+    }
+
+    public function admin()
+    {
+        return $this->belongsTo('app\admin\model\Admin','admin_id','id','','INNER')->setEagerlyType(0);
     }
 }
