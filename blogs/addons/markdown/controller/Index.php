@@ -1,6 +1,6 @@
 <?php
 
-namespace addons\summernote\controller;
+namespace addons\markdown\controller;
 
 use think\addons\Controller;
 
@@ -13,4 +13,3 @@ class Index extends Controller
     }
 
 }
-

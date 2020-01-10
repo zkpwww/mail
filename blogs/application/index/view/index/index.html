@@ -1,97 +1,4 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8">
-    <title>99羊毛</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta name="keywords" content="99羊毛社区">
-    <meta name="description" content="99羊毛网提供最新最好的褥羊毛博客信息，让大家能在空闲时间多赚一些外快">
-    <link rel="stylesheet" href="/assets/pc/plugin/layui/css/layui.css">
-    <link rel="stylesheet" href="/assets/pc/css/global.css">
-</head>
-<body>
-
-<!--logo-->
-<div class="fly-header layui-bg-black">
-    <div class="layui-container">
-
-        <!--logo-->
-        <a class="fly-name" href="index.html" style="" title="首页">
-            <i class="layui-icon">&#xe68e;</i><img src="/assets/pc/images/logo.png">
-        </a>
-
-        <!--重要链接-->
-        <ul class="layui-nav fly-nav layui-hide-xs">
-            <li class="layui-nav-item layui-this">
-                <a href="#"><i class="iconfont icon-renzheng"></i>加群</a>
-            </li>
-            <li class="layui-nav-item layui-this">
-                <a href="#"><i class="iconfont icon-renzheng"></i>广告洽谈</a>
-            </li>
-        </ul>
-
-        <!--登录窗口-->
-        <ul class="layui-nav fly-nav-user">
-
-            <!-- 未登录的状态 -->
-            <li class="layui-nav-item">
-                <a class="iconfont icon-touxiang layui-hide-xs" href="user/login.html"></a>
-            </li>
-            <li class="layui-nav-item">
-                <a href="index/user/login">登录</a>
-            </li>
-            <li class="layui-nav-item">
-                <a href="index/user/register">注册</a>
-            </li>
-            <li class="layui-nav-item layui-hide-xs">
-                <a title="QQ登录" class="iconfont icon-qq"></a>
-            </li>
-
-            <!-- 登录后的状态 -->
-            <!--
-             <li class="layui-nav-item">
-              <a class="fly-nav-avatar" href="javascript:;">
-                <cite class="layui-hide-xs">贤心</cite>
-                <img src="https://tva1.sinaimg.cn/crop.0.0.118.118.180/5db11ff4gw1e77d3nqrv8j203b03cweg.jpg">
-              </a>
-              <dl class="layui-nav-child">
-                <dd><a href="user/set.html"><i class="layui-icon">&#xe620;</i>基本设置</a></dd>
-                <dd><a href="user/collect.html"><i class="iconfont icon-tongzhi" style="top: 4px;"></i>我的收藏</a></dd>
-                <hr style="margin: 5px 0;">
-                <dd><a href="index.html" style="text-align: center;">退出</a></dd>
-              </dl>
-            </li>-->
-
-        </ul>
-    </div>
-</div>
-
-<!--nav-->
-<div class="fly-panel fly-column">
-    <div class="layui-container">
-
-        <!--nav主体-->
-        <ul class="layui-clear">
-            <li class="layui-hide-xs layui-this"><a href="#">首页</a></li>
-            <li><a href="sub/news.html">羊毛线报</a></li>
-            <li><a href="sub/news.html">热点好项目</a></li>
-            <li><a href="sub/news.html">长期项目</a></li>
-            <li><a href="sub/news.html">区块链技术</a></li>
-            <li><a href="sub/news.html">提现展示</a></li>
-            <li><a href="sub/news.html">防骗指南</a></li>
-            <li class="layui-hide-xs layui-hide-sm layui-show-md-inline-block"><span class="fly-mid"></span></li>
-            <li class="layui-hide-xs layui-hide-sm layui-show-md-inline-block"><a href="user/collect.html">我收藏的贴</a>
-            </li>
-        </ul>
-
-        <!--搜索-->
-        <div class="fly-column-right layui-hide-xs">
-            <span class="fly-search"><i class="layui-icon"></i></span>
-        </div>
-
-    </div>
-</div>
-
+{include file="common/sidenav" /}
 
 <!--body-->
 <div class="layui-container">
@@ -106,15 +13,11 @@
                 <div class="layui-row fly-panel-main">
                     <div class="layui-carousel fly-banner" id="topBanner">
                         <div carousel-item>
-                            <a href="#">
-                                <img src="/assets/pc/images/test/banner.jpg" alt="qyyt">
-                            </a>
-                            <a href="#">
-                                <img src="/assets/pc/images/test/banner.png" alt="qyyt">
-                            </a>
-                            <a href="#">
-                                <img src="/assets/pc/images/test/banner.jpg" alt="qyyt">
-                            </a>
+                            {volist name='slideList' id='vo'}
+                                <a href="{:url($vo.link_url)}">
+                                    <img src="{$vo.url}" alt="qyyt">
+                                </a>
+                            {/volist}
                         </div>
                     </div>
                 </div>
@@ -132,158 +35,27 @@
 
                 <!--文章主体-->
                 <ul class="fly-list">
+                    {volist name='articleList' id='vo'}
                     <li>
-                        <a href="./sub/detail.html">
+                        <a href="{:url('article/detail',['id' => $vo['id']])}">
                             <div class="fly-avatar">
                                 <img src="https://tva1.sinaimg.cn/crop.0.0.118.118.180/5db11ff4gw1e77d3nqrv8j203b03cweg.jpg" alt="贤心">
                             </div>
                             <h2>
                                 <span class="layui-badge">原创</span>
-                                <span>淘果儿送的果树值钱吗？淘果儿怎么玩？</span>
+                                <span>{$vo.title}</span>
                             </h2>
                             <div class="fly-list-info">
-                                <span class="fly-black">流星</span>
-                                <span>刚刚</span>
-                                <span class="fly-list-nums">浏览次数 66</span>
+                                <span class="fly-black">{$vo.admin.username}</span>
+                                <span>{$vo.createtime}</span>
+                                <span class="fly-list-nums">{$vo['virtual_view'] + $vo['actual_view']}</span>
                             </div>
                             <div class="fly-list-badge">
                                 <span class="layui-badge layui-bg-red">精帖</span>
                             </div>
                         </a>
                     </li>
-                    <li>
-                        <a href="./sub/detail.html">
-                            <div class="fly-avatar">
-                                <img src="https://tva1.sinaimg.cn/crop.0.0.118.118.180/5db11ff4gw1e77d3nqrv8j203b03cweg.jpg" alt="贤心">
-                            </div>
-                            <h2>
-                                <span class="layui-badge">原创</span>
-                                <span>淘果儿送的果树值钱吗？淘果儿怎么玩？</span>
-                            </h2>
-                            <div class="fly-list-info">
-                                <span class="fly-black">流星</span>
-                                <span>刚刚</span>
-                                <span class="fly-list-nums">浏览次数 66</span>
-                            </div>
-                            <div class="fly-list-badge">
-                                <span class="layui-badge layui-bg-red">精帖</span>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="./sub/detail.html">
-                            <div class="fly-avatar">
-                                <img src="https://tva1.sinaimg.cn/crop.0.0.118.118.180/5db11ff4gw1e77d3nqrv8j203b03cweg.jpg" alt="贤心">
-                            </div>
-                            <h2>
-                                <span class="layui-badge">原创</span>
-                                <span>淘果儿送的果树值钱吗？淘果儿怎么玩？</span>
-                            </h2>
-                            <div class="fly-list-info">
-                                <span class="fly-black">流星</span>
-                                <span>刚刚</span>
-                                <span class="fly-list-nums">浏览次数 66</span>
-                            </div>
-                            <div class="fly-list-badge">
-                                <span class="layui-badge layui-bg-red">精帖</span>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="./sub/detail.html">
-                            <div class="fly-avatar">
-                                <img src="https://tva1.sinaimg.cn/crop.0.0.118.118.180/5db11ff4gw1e77d3nqrv8j203b03cweg.jpg" alt="贤心">
-                            </div>
-                            <h2>
-                                <span class="layui-badge">原创</span>
-                                <span>淘果儿送的果树值钱吗？淘果儿怎么玩？</span>
-                            </h2>
-                            <div class="fly-list-info">
-                                <span class="fly-black">流星</span>
-                                <span>刚刚</span>
-                                <span class="fly-list-nums">浏览次数 66</span>
-                            </div>
-                            <div class="fly-list-badge">
-                                <span class="layui-badge layui-bg-red">精帖</span>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="./sub/detail.html">
-                            <div class="fly-avatar">
-                                <img src="https://tva1.sinaimg.cn/crop.0.0.118.118.180/5db11ff4gw1e77d3nqrv8j203b03cweg.jpg" alt="贤心">
-                            </div>
-                            <h2>
-                                <span class="layui-badge">原创</span>
-                                <span>淘果儿送的果树值钱吗？淘果儿怎么玩？</span>
-                            </h2>
-                            <div class="fly-list-info">
-                                <span class="fly-black">流星</span>
-                                <span>刚刚</span>
-                                <span class="fly-list-nums">浏览次数 66</span>
-                            </div>
-                            <div class="fly-list-badge">
-                                <span class="layui-badge layui-bg-red">精帖</span>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="./sub/detail.html">
-                            <div class="fly-avatar">
-                                <img src="https://tva1.sinaimg.cn/crop.0.0.118.118.180/5db11ff4gw1e77d3nqrv8j203b03cweg.jpg" alt="贤心">
-                            </div>
-                            <h2>
-                                <span class="layui-badge">原创</span>
-                                <span>淘果儿送的果树值钱吗？淘果儿怎么玩？</span>
-                            </h2>
-                            <div class="fly-list-info">
-                                <span class="fly-black">流星</span>
-                                <span>刚刚</span>
-                                <span class="fly-list-nums">浏览次数 66</span>
-                            </div>
-                            <div class="fly-list-badge">
-                                <span class="layui-badge layui-bg-red">精帖</span>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="./sub/detail.html">
-                            <div class="fly-avatar">
-                                <img src="https://tva1.sinaimg.cn/crop.0.0.118.118.180/5db11ff4gw1e77d3nqrv8j203b03cweg.jpg" alt="贤心">
-                            </div>
-                            <h2>
-                                <span class="layui-badge">原创</span>
-                                <span>淘果儿送的果树值钱吗？淘果儿怎么玩？</span>
-                            </h2>
-                            <div class="fly-list-info">
-                                <span class="fly-black">流星</span>
-                                <span>刚刚</span>
-                                <span class="fly-list-nums">浏览次数 66</span>
-                            </div>
-                            <div class="fly-list-badge">
-                                <span class="layui-badge layui-bg-red">精帖</span>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="./sub/detail.html">
-                            <div class="fly-avatar">
-                                <img src="https://tva1.sinaimg.cn/crop.0.0.118.118.180/5db11ff4gw1e77d3nqrv8j203b03cweg.jpg" alt="贤心">
-                            </div>
-                            <h2>
-                                <span class="layui-badge">原创</span>
-                                <span>淘果儿送的果树值钱吗？淘果儿怎么玩？</span>
-                            </h2>
-                            <div class="fly-list-info">
-                                <span class="fly-black">流星</span>
-                                <span>刚刚</span>
-                                <span class="fly-list-nums">浏览次数 66</span>
-                            </div>
-                            <div class="fly-list-badge">
-                                <span class="layui-badge layui-bg-red">精帖</span>
-                            </div>
-                        </a>
-                    </li>
+                    {/volist}
                 </ul>
 
                 <!--加载更多-->
@@ -303,14 +75,11 @@
             <div class="fly-panel">
                 <h3 class="fly-panel-title">重点推荐</h3>
                 <ul class="fly-panel-main fly-list-static">
-                    <li>
-                        <a href="#">layui 的 GitHub 及 Gitee (码云) 仓库，欢迎Star</a>
-                    </li>
-                    <li>
-                        <a href="http://fly.layui.com/jie/5366/">
-                            layui 常见问题的处理和实用干货集锦
-                        </a>
-                    </li>
+                    {volist name="recommendList" id="vo"}
+                        <li>
+                            <a href="#">{$vo.title}</a>
+                        </li>
+                    {/volist}
                 </ul>
             </div>
 
@@ -344,26 +113,13 @@
                     <a href="sub/software.html" class="fly-right">更多</a>
                 </h3>
                 <dl>
-                    <dd>
-                        <a href="sub/software.html">
-                            <img src="https://tva1.sinaimg.cn/crop.0.0.118.118.180/5db11ff4gw1e77d3nqrv8j203b03cweg.jpg"><i>趣头条</i>
-                        </a>
-                    </dd>
-                    <dd>
-                        <a href="sub/software.html">
-                            <img src="https://tva1.sinaimg.cn/crop.0.0.118.118.180/5db11ff4gw1e77d3nqrv8j203b03cweg.jpg"><i>趣头条</i>
-                        </a>
-                    </dd>
-                    <dd>
-                        <a href="sub/software.html">
-                            <img src="https://tva1.sinaimg.cn/crop.0.0.118.118.180/5db11ff4gw1e77d3nqrv8j203b03cweg.jpg"><i>趣头条</i>
-                        </a>
-                    </dd>
-                    <dd>
-                        <a href="sub/software.html">
-                            <img src="https://tva1.sinaimg.cn/crop.0.0.118.118.180/5db11ff4gw1e77d3nqrv8j203b03cweg.jpg"><i>趣头条</i>
-                        </a>
-                    </dd>
+                    {volist name='softwareList' id='vo'}
+                        <dd>
+                            <a href='#'>
+                                <img src="{$vo.url}"><i>{$vo.name}</i>
+                            </a>
+                        </dd>
+                    {/volist}
                 </dl>
             </div>
 
@@ -371,10 +127,9 @@
             <div class="fly-panel fly-link">
                 <h3 class="fly-panel-title">友情链接</h3>
                 <dl class="fly-panel-main">
-                    <dd><a href="#">layui</a></dd>
-                    <dd><a href="#">护肤网</a></dd>
-                    <dd><a href="#">水果网</a></dd>
-                    <dd><a href="#">淘宝</a></dd>
+                    {volist name='linkList' id='vo'}
+                     <dd><a href="{$vo.link_url}" target="_blank">{$vo.name}</a></dd>
+                    {/volist}
                     <dd><a href="#" class="fly-link">申请友链</a></dd>
                 </dl>
             </div>
@@ -391,29 +146,4 @@
 
 </div>
 
-<!--回到顶部-->
-<ul class="layui-fixbar">
-    <li class="layui-icon layui-fixbar-top fly-go-top layui-hide-xs" style="display: block"></li>
-    <li class="layui-icon fly-go-back layui-show-xs-block layui-hide" style="display: block">
-        <i class="layui-icon layui-icon-return fly-go-back-icon"></i>
-    </li>
-</ul>
 
-<!--footer-->
-<div class="fly-footer">
-    <p>
-        <a href="https://www.99yangmao.com/">
-            99羊毛社区
-        </a>
-        2019 &copy;
-        <a href="https://www.99yangmao.com/">
-            99yangmao.com 出品
-        </a>
-    </p>
-</div>
-
-<script src="/assets/pc/plugin/layui/layui.js"></script>
-<script src="/assets/pc/js/common.js"></script>
-
-</body>
-</html>

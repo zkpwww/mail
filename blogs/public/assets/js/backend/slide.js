@@ -27,6 +27,7 @@ define(['jquery', 'bootstrap', 'backend', 'table', 'form'], function ($, undefin
                         {field: 'id', title: __('Id')},
                         {field: 'name', title: __('Name'), align: 'left'},
                         {field: 'url', title: __('图片'), operate: false, events: Table.api.events.image, formatter: Table.api.formatter.image},
+                        {field: 'link_url', title: __('链接地址'), operate: false},
                         {field: 'status', title: __('Status'), operate: false, formatter: Table.api.formatter.status},
                         {field: 'operate', title: __('Operate'), table: table, events: Table.api.events.operate, formatter: Table.api.formatter.operate}
                     ]

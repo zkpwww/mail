@@ -1,11 +1,22 @@
-<div class="sidenav">
-    {:hook('user_sidenav_before')}
-    <ul class="list-group">
-        <li class="list-group-heading">{:__('User center')}</li>
-        <li class="list-group-item {:$config['actionname']=='index'?'active':''}"> <a href="{:url('user/index')}"><i class="fa fa-user-circle fa-fw"></i> {:__('User center')}</a> </li>
-        <li class="list-group-item {:$config['actionname']=='profile'?'active':''}"> <a href="{:url('user/profile')}"><i class="fa fa-user-o fa-fw"></i> {:__('Profile')}</a> </li>
-        <li class="list-group-item {:$config['actionname']=='changepwd'?'active':''}"> <a href="{:url('user/changepwd')}"><i class="fa fa-key fa-fw"></i> {:__('Change password')}</a> </li>
-        <li class="list-group-item {:$config['actionname']=='logout'?'active':''}"> <a href="{:url('user/logout')}"><i class="fa fa-sign-out fa-fw"></i> {:__('Sign out')}</a> </li>
-    </ul>
-    {:hook('user_sidenav_after')}
+
+<div class="fly-panel fly-column">
+    <div class="layui-container">
+
+        <!--nav主体-->
+        <ul class="layui-clear">
+            <li class="layui-hide-xs layui-this"><a href="#">首页</a></li>
+            {volist name='categoryList' id='vo'}
+            <li><a href="index/index?category_id={$vo.id}">{$vo.name}</a></li>
+            {/volist}
+            <li class="layui-hide-xs layui-hide-sm layui-show-md-inline-block"><span class="fly-mid"></span></li>
+            <li class="layui-hide-xs layui-hide-sm layui-show-md-inline-block"><a href="user/collect.html">我收藏的贴</a>
+            </li>
+        </ul>
+
+        <!--搜索-->
+        <div class="fly-column-right layui-hide-xs">
+            <span class="fly-search"><i class="layui-icon"></i></span>
+        </div>
+
+    </div>
 </div>

@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:82:"F:\work_else\mail\blogs\public/../application/admin\view\article\article\edit.html";i:1577433749;s:66:"F:\work_else\mail\blogs\application\admin\view\layout\default.html";i:1576638344;s:63:"F:\work_else\mail\blogs\application\admin\view\common\meta.html";i:1576638344;s:65:"F:\work_else\mail\blogs\application\admin\view\common\script.html";i:1576638344;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:81:"F:\work_else\mail\blogs\public/../application/admin\view\article\article\add.html";i:1578377780;s:66:"F:\work_else\mail\blogs\application\admin\view\layout\default.html";i:1576638344;s:63:"F:\work_else\mail\blogs\application\admin\view\common\meta.html";i:1576638344;s:65:"F:\work_else\mail\blogs\application\admin\view\common\script.html";i:1576638344;}*/ ?>
 <!DOCTYPE html>
 <html lang="<?php echo $config['language']; ?>">
     <head>
@@ -58,7 +58,7 @@
 
             <select id="c-pid" data-rule="required" class="form-control selectpicker" name="row[category_id]">
                 <?php if(is_array($parentList) || $parentList instanceof \think\Collection || $parentList instanceof \think\Paginator): if( count($parentList)==0 ) : echo "" ;else: foreach($parentList as $key=>$vo): ?>
-                <option value="<?php echo $key; ?>" <?php if(in_array(($key), is_array($row['category_id'])?$row['category_id']:explode(',',$row['category_id']))): ?>selected<?php endif; ?>><?php echo $vo['name']; ?></option>
+                <option value="<?php echo $key; ?>"><?php echo $vo['name']; ?></option>
                 <?php endforeach; endif; else: echo "" ;endif; ?>
             </select>
 
@@ -67,38 +67,44 @@
     <div class="form-group">
         <label for="c-name" class="control-label col-xs-12 col-sm-2"><?php echo __('文章标题'); ?>:</label>
         <div class="col-xs-12 col-sm-8">
-            <input id="c-name" data-rule="required" class="form-control" name="row[title]" type="text" value="<?php echo htmlentities($row['title']); ?>">
+            <input id="c-name" data-rule="required" class="form-control" name="row[title]" type="text" value="">
         </div>
     </div>
 
     <div class="form-group">
         <label for="c-virtual_view" class="control-label col-xs-12 col-sm-2"><?php echo __('虚拟点击量'); ?>:</label>
         <div class="col-xs-12 col-sm-8">
-            <input id="c-virtual_view" class="form-control" name="row[virtual_view]" type="number" value="<?php echo $row['virtual_view']; ?>">
+            <input id="c-virtual_view" class="form-control" name="row[virtual_view]" type="number">
         </div>
     </div>
     <div class="form-group">
         <label for="c-weigh" class="control-label col-xs-12 col-sm-2"><?php echo __('Weigh'); ?>:</label>
         <div class="col-xs-12 col-sm-8">
-            <input id="c-weigh" class="form-control" name="row[weigh]" type="number" value="<?php echo $row['weigh']; ?>">
+            <input id="c-weigh" class="form-control" name="row[weigh]" type="number" value="">
         </div>
     </div>
     <div class="form-group">
         <label class="control-label col-xs-12 col-sm-2"><?php echo __('Status'); ?>:</label>
         <div class="col-xs-12 col-sm-8">
-            <?php echo build_radios('row[status]', ['normal'=>__('Normal'), 'hidden'=>__('Hidden')], $row['status']); ?>
+            <?php echo build_radios('row[status]', ['normal'=>__('Normal'), 'hidden'=>__('Hidden')], ''); ?>
         </div>
     </div>
     <div class="form-group">
         <label class="control-label col-xs-12 col-sm-2"><?php echo __('是否置顶'); ?>:</label>
         <div class="col-xs-12 col-sm-8">
-            <?php echo Form::switcher('row[is_top]', $row['is_top'], ['color'=>'success']); ?>
+            <?php echo Form::switcher('row[is_top]', 0, ['color'=>'success']); ?>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="c-type" class="control-label col-xs-12 col-sm-2"><?php echo __('文章类型'); ?>:</label>
+        <div class="col-xs-12 col-sm-8">
+            <?php echo Form::select('row[type]', $typeList, '', ['data-rule'=>'required']); ?>
         </div>
     </div>
     <div class="form-group">
         <label for="c-content" class="control-label col-xs-12 col-sm-2"><?php echo __('内容'); ?>:</label>
         <div class="col-xs-12 col-sm-8">
-            <textarea  class="form-control editor" name="row[content]"  id="c-content"><?php echo $row['content']; ?></textarea>
+            <textarea  class="form-control editor" name="row[content]"  id="c-content"></textarea>
         </div>
     </div>
     <div class="form-group layer-footer">
