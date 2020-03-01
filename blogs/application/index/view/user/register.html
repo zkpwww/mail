@@ -1,53 +1,3 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8">
-    <title>注册</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta name="keywords" content="">
-    <meta name="description" content="">
-    <link rel="stylesheet" href="/assets/pc/plugin/layui/css/layui.css">
-    <link rel="stylesheet" href="/assets/pc/css/global.css">
-</head>
-<body>
-
-<div class="fly-header layui-bg-black">
-    <div class="layui-container">
-
-        <!--logo-->
-        <a class="fly-name" href="../index.html" style="" title="首页">
-            <i class="layui-icon">&#xe68e;</i><img src="/assets/pc/images/logo.png">
-        </a>
-
-        <!--重要链接-->
-        <ul class="layui-nav fly-nav layui-hide-xs">
-            <li class="layui-nav-item layui-this">
-                <a href="#"><i class="iconfont icon-renzheng"></i>加群</a>
-            </li>
-            <li class="layui-nav-item layui-this">
-                <a href="#"><i class="iconfont icon-renzheng"></i>广告洽谈</a>
-            </li>
-        </ul>
-
-        <!--登录窗口-->
-        <ul class="layui-nav fly-nav-user">
-
-            <!-- 登录后的状态 -->
-            <li class="layui-nav-item">
-                <a class="fly-nav-avatar" href="javascript:;">
-                    <cite class="layui-hide-xs">贤心</cite>
-                    <img src="https://tva1.sinaimg.cn/crop.0.0.118.118.180/5db11ff4gw1e77d3nqrv8j203b03cweg.jpg">
-                </a>
-                <dl class="layui-nav-child">
-                    <dd><a href="set.html"><i class="layui-icon">&#xe620;</i>基本设置</a></dd>
-                    <dd><a href="collect.html"><i class="iconfont icon-tongzhi" style="top: 4px;"></i>我的收藏</a></dd>
-                    <hr style="margin: 5px 0;">
-                    <dd><a href="../index.html" style="text-align: center;">退出</a></dd>
-                </dl>
-            </li>
-        </ul>
-    </div>
-</div>
 
 <div class="layui-container fly-marginTop">
     <div class="fly-panel fly-panel-user" pad20>
@@ -61,6 +11,12 @@
                     <div class="layui-form layui-form-pane">
                         <form method="post">
                             <div class="layui-form-item">
+                                <label class="layui-form-label">用户名称</label>
+                                <div class="layui-input-inline">
+                                    <input type="text"  name="username"  autocomplete="off" class="layui-input">
+                                </div>
+                            </div>
+                            <div class="layui-form-item">
                                 <label class="layui-form-label">邮箱</label>
                                 <div class="layui-input-inline">
                                     <input type="text"  name="email"  autocomplete="off" class="layui-input">
@@ -69,19 +25,21 @@
                             <div class="layui-form-item">
                                 <label class="layui-form-label">设置密码</label>
                                 <div class="layui-input-inline">
-                                    <input type="password" autocomplete="off"  placeholder="6到16个字符" class="layui-input">
+                                    <input type="password" autocomplete="off"  placeholder="6到16个字符" class="layui-input" name="password">
                                 </div>
                             </div>
                             <div class="layui-form-item">
                                 <label class="layui-form-label">确认密码</label>
                                 <div class="layui-input-inline">
-                                    <input type="password" autocomplete="off" class="layui-input">
+                                    <input type="password" autocomplete="off" class="layui-input" name="repassword">
                                 </div>
                             </div>
                             <div class="layui-form-item">
-                                <label class="layui-form-label">获取验证码</label>
+                                <label class="layui-form-label">
+                                    <img src="{:rtrim('__PUBLIC__', '/')}/index.php?s=/captcha" width="100" height="30" onclick="this.src = '{:rtrim('__PUBLIC__', '/')}/index.php?s=/captcha&r=' + Math.random();"/>
+                                </label>
                                 <div class="layui-input-inline">
-                                    <input type="password" autocomplete="off" placeholder="请输入验证码" class="layui-input">
+                                    <input type="text" autocomplete="off" placeholder="请输入验证码" class="layui-input" name="captcha">
                                 </div>
                             </div>
                             <div class="layui-form-item fly-margin-t20" >
@@ -95,28 +53,3 @@
     </div>
 </div>
 
-<!--回到顶部-->
-<ul class="layui-fixbar">
-    <li class="layui-icon fly-go-back layui-show-xs-block layui-hide" style="display: block">
-        <i class="layui-icon layui-icon-return fly-go-back-icon"></i>
-    </li>
-</ul>
-
-
-<div class="fly-footer">
-    <p>
-        <a href="https://www.99yangmao.com/" >
-            99羊毛社区
-        </a>
-        2019 &copy;
-        <a href="https://www.99yangmao.com/" >
-            99yangmao.com 出品
-        </a>
-    </p>
-</div>
-
-<script src="/assets/pc/plugin/layui/layui.js"></script>
-<script src="/assets/pc/js/common.js"></script>
-
-</body>
-</html>

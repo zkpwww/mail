@@ -103,6 +103,7 @@ class Frontend extends Controller
             'actionname'     => $actionname,
             'jsname'         => 'frontend/' . str_replace('.', '/', $controllername),
             'moduleurl'      => rtrim(url("/{$modulename}", '', false), '/'),
+            'fastadmin'      => Config::get('fastadmin'),
             'language'       => $lang
         ];
         $config = array_merge($config, Config::get("view_replace_str"));

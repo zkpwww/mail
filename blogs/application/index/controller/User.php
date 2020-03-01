@@ -17,8 +17,9 @@ use think\Validate;
  */
 class User extends Frontend
 {
-    protected $layout = '';
-    protected $noNeedLogin = ['login', 'register', 'third','changepwd'];
+    protected $layout = 'index_default';
+//    protected $noNeedLogin = ['login', 'register', 'third','changepwd'];
+    protected $noNeedLogin = ['*'];
     protected $noNeedRight = ['*'];
 
     public function _initialize()
@@ -86,14 +87,14 @@ class User extends Frontend
             $username = $this->request->post('username');
             $password = $this->request->post('password');
             $email = $this->request->post('email');
-            $mobile = $this->request->post('mobile', '');
+//            $mobile = $this->request->post('mobile', '');
             $captcha = $this->request->post('captcha');
             $token = $this->request->post('__token__');
             $rule = [
                 'username'  => 'require|length:3,30',
                 'password'  => 'require|length:6,30',
                 'email'     => 'require|email',
-                'mobile'    => 'regex:/^1\d{10}$/',
+//                'mobile'    => 'regex:/^1\d{10}$/',
                 '__token__' => 'require|token',
             ];
 
@@ -103,13 +104,13 @@ class User extends Frontend
                 'password.require' => 'Password can not be empty',
                 'password.length'  => 'Password must be 6 to 30 characters',
                 'email'            => 'Email is incorrect',
-                'mobile'           => 'Mobile is incorrect',
+//                'mobile'           => 'Mobile is incorrect',
             ];
             $data = [
                 'username'  => $username,
                 'password'  => $password,
                 'email'     => $email,
-                'mobile'    => $mobile,
+//                'mobile'    => $mobile,
                 '__token__' => $token,
             ];
             //验证码
@@ -270,6 +271,17 @@ class User extends Frontend
             }
         }
         $this->view->assign('title', __('Change password'));
+        return $this->view->fetch();
+    }
+
+    public function collect()
+    {
+        $this->view->assign('title', __('我的收藏'));
+        return $this->view->fetch();
+    }
+    public function set()
+    {
+        $this->view->assign('title', __('基本设置'));
         return $this->view->fetch();
     }
 }
