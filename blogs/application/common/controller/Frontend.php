@@ -111,6 +111,11 @@ class Frontend extends Controller
 
         // 配置信息后
         Hook::listen("config_init", $config);
+        $categoryList = model('article_category')->where('status','normal')->order('weigh desc')->select();
+        $recommendList = model('article')->where(['status' => 'normal','type' => 2])->order('is_top desc,weigh desc')->limit(2)->select();
+        $softwareList = model('software')->where(['status' => 'normal'])->order('id desc')->limit(4)->select();
+        $linkList = model('blogroll')->where(['status' => 'normal'])->order('id desc')->limit(4)->select();
+        $this->assign(compact('categoryList','recommendList','softwareList','linkList'));
         // 加载当前控制器语言包
         $this->loadlang($controllername);
         $this->assign('site', $site);

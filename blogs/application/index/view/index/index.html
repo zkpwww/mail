@@ -68,79 +68,7 @@
 
         </div>
 
-        <!--右边-->
-        <div class="layui-col-md4">
 
-            <!--重点项目-->
-            <div class="fly-panel">
-                <h3 class="fly-panel-title">重点推荐</h3>
-                <ul class="fly-panel-main fly-list-static">
-                    {volist name="recommendList" id="vo"}
-                        <li>
-                            <a href="#">{$vo.title}</a>
-                        </li>
-                    {/volist}
-                </ul>
-            </div>
-
-            <!--广告-->
-            <div class="fly-panel">
-                <div class="fly-panel-title">
-                    赞助商
-                    <span class="fly-mid"></span>
-                    <a href="" class="fly-link fly-joinad">我要加入</a>
-                </div>
-
-                <div class="fly-panel-main">
-
-                    <!--没有广告的时候显示这个，有则隐藏-->
-                    <a href="#" class="fly-zanzhu fly-ad-rg">
-                        广告位
-                    </a>
-
-                    <!--广告位实际图片-->
-                    <a href="">
-                        <img src="/assets/pc/images/test/banner.jpg" class="fly-ad-img" />
-                    </a>
-
-                </div>
-            </div>
-
-            <!--热门软件-->
-            <div class="fly-panel fly-rank fly-rank-reply">
-                <h3 class="fly-panel-title fly-clear">
-                    <span class="fly-left">热门软件</span>
-                    <a href="sub/software.html" class="fly-right">更多</a>
-                </h3>
-                <dl>
-                    {volist name='softwareList' id='vo'}
-                        <dd>
-                            <a href='#'>
-                                <img src="{$vo.url}"><i>{$vo.name}</i>
-                            </a>
-                        </dd>
-                    {/volist}
-                </dl>
-            </div>
-
-            <!--友情链接-->
-            <div class="fly-panel fly-link">
-                <h3 class="fly-panel-title">友情链接</h3>
-                <dl class="fly-panel-main">
-                    {volist name='linkList' id='vo'}
-                     <dd><a href="{$vo.link_url}" target="_blank">{$vo.name}</a></dd>
-                    {/volist}
-                    <dd><a href="#" class="fly-link">申请友链</a></dd>
-                </dl>
-            </div>
-
-            <!--加入qq粉丝群-->
-            <div class="fly-panel fly-us-code" style="">
-                <img src="/assets/pc/images/test/pay.jpg" alt="99羊毛">
-                <p>QQ 扫码加入 99羊毛官方群</p>
-            </div>
-
-        </div>
 
     </div>
 
