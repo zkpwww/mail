@@ -11,18 +11,20 @@
                 <div class="layui-tab-item layui-show">
                     <div class="layui-form layui-form-pane">
                         <form method="post">
+                            {:token()}
                             <div class="layui-form-item">
                                 <label class="layui-form-label">邮箱</label>
                                 <div class="layui-input-inline">
-                                    <input type="text"  name="email"  autocomplete="off" class="layui-input">
+                                    <input type="text"  name="account"  autocomplete="off" class="layui-input">
                                 </div>
                             </div>
                             <div class="layui-form-item">
                                 <label class="layui-form-label">密码</label>
                                 <div class="layui-input-inline">
-                                    <input type="password" autocomplete="off" class="layui-input">
+                                    <input type="password" autocomplete="off" class="layui-input" name="password">
                                 </div>
                             </div>
+
                             <div class="layui-form-item">
                                 <button class="layui-btn" lay-submit>立即登录</button>
                                 <span style="padding-left:20px;">

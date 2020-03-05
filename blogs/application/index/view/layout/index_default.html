@@ -32,14 +32,14 @@
             {notempty name="user"}
             <li class="layui-nav-item">
                 <a class="fly-nav-avatar" href="javascript:;">
-                    <cite class="layui-hide-xs">{$user}</cite>
-                    <img src="https://tva1.sinaimg.cn/crop.0.0.118.118.180/5db11ff4gw1e77d3nqrv8j203b03cweg.jpg">
+                    <cite class="layui-hide-xs">{$user.username}</cite>
+                    <img src="{$user.avatar|default='https://tva1.sinaimg.cn/crop.0.0.118.118.180/5db11ff4gw1e77d3nqrv8j203b03cweg.jpg'}">
                 </a>
                 <dl class="layui-nav-child">
-                    <dd><a href="user/set.html"><i class="layui-icon">&#xe620;</i>基本设置</a></dd>
-                    <dd><a href="user/collect.html"><i class="iconfont icon-tongzhi" style="top: 4px;"></i>我的收藏</a></dd>
+                    <dd><a href="{:url('index/user/set')}"><i class="layui-icon">&#xe620;</i>基本设置</a></dd>
+                    <dd><a href="{:url('index/user/collect')}"><i class="iconfont icon-tongzhi" style="top: 4px;"></i>我的收藏</a></dd>
                     <hr style="margin: 5px 0;">
-                    <dd><a href="index.html" style="text-align: center;">退出</a></dd>
+                    <dd><a href="{:url('index/user/logout')}" style="text-align: center;">退出</a></dd>
                 </dl>
             </li>
             {else/}

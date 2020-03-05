@@ -86,8 +86,9 @@ class User extends Frontend
         if ($this->request->isPost()) {
             $username = $this->request->post('username');
             $password = $this->request->post('password');
+            $repassword = $this->request->post('repassword');
             $email = $this->request->post('email');
-//            $mobile = $this->request->post('mobile', '');
+            $mobile = $this->request->post('mobile', '');
             $captcha = $this->request->post('captcha');
             $token = $this->request->post('__token__');
             $rule = [
@@ -96,6 +97,7 @@ class User extends Frontend
                 'email'     => 'require|email',
 //                'mobile'    => 'regex:/^1\d{10}$/',
                 '__token__' => 'require|token',
+                'repassword'=>'require|confirm:password'
             ];
 
             $msg = [
@@ -104,11 +106,13 @@ class User extends Frontend
                 'password.require' => 'Password can not be empty',
                 'password.length'  => 'Password must be 6 to 30 characters',
                 'email'            => 'Email is incorrect',
+                'repassword'       => '两次密码不一样'
 //                'mobile'           => 'Mobile is incorrect',
             ];
             $data = [
                 'username'  => $username,
                 'password'  => $password,
+                'repassword' => $repassword,
                 'email'     => $email,
 //                'mobile'    => $mobile,
                 '__token__' => $token,
@@ -136,7 +140,7 @@ class User extends Frontend
                 $this->error(__($validate->getError()), null, ['token' => $this->request->token()]);
             }
             if ($this->auth->register($username, $password, $email, $mobile)) {
-                $this->success(__('Sign up successful'), $url ? $url : url('user/index'));
+                $this->success(__('Sign up successful'), $url ? $url : url('user/set'));
             } else {
                 $this->error($this->auth->getError(), null, ['token' => $this->request->token()]);
             }
@@ -168,14 +172,14 @@ class User extends Frontend
             $keeplogin = (int)$this->request->post('keeplogin');
             $token = $this->request->post('__token__');
             $rule = [
-                'account'   => 'require|length:3,50',
+                'account'   => 'require|email',
                 'password'  => 'require|length:6,30',
                 '__token__' => 'require|token',
             ];
 
             $msg = [
                 'account.require'  => 'Account can not be empty',
-                'account.length'   => 'Account must be 3 to 50 characters',
+                'account.email'   => 'Email is incorrect',
                 'password.require' => 'Password can not be empty',
                 'password.length'  => 'Password must be 6 to 30 characters',
             ];
@@ -191,7 +195,7 @@ class User extends Frontend
                 return false;
             }
             if ($this->auth->login($account, $password)) {
-                $this->success(__('Logged in successful'), $url ? $url : url('user/index'));
+                $this->success(__('Logged in successful'), $url ? $url : url('user/set'));
             } else {
                 $this->error($this->auth->getError(), null, ['token' => $this->request->token()]);
             }
@@ -214,7 +218,7 @@ class User extends Frontend
     {
         //注销本站
         $this->auth->logout();
-        $this->success(__('Logout successful'), url('user/index'));
+        $this->success(__('Logout successful'), url('index/index'));
     }
 
     /**

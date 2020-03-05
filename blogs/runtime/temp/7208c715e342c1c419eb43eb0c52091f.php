@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:5:{s:73:"F:\work_else\mail\blogs\public/../application/index\view\index\index.html";i:1578564096;s:72:"F:\work_else\mail\blogs\application\index\view\layout\index_default.html";i:1578471263;s:63:"F:\work_else\mail\blogs\application\index\view\common\meta.html";i:1578470972;s:66:"F:\work_else\mail\blogs\application\index\view\common\sidenav.html";i:1578555158;s:65:"F:\work_else\mail\blogs\application\index\view\common\script.html";i:1578471186;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:5:{s:73:"F:\work_else\mail\blogs\public/../application/index\view\index\index.html";i:1578626953;s:72:"F:\work_else\mail\blogs\application\index\view\layout\index_default.html";i:1583049776;s:63:"F:\work_else\mail\blogs\application\index\view\common\meta.html";i:1578626228;s:66:"F:\work_else\mail\blogs\application\index\view\common\sidenav.html";i:1578626228;s:65:"F:\work_else\mail\blogs\application\index\view\common\script.html";i:1578626228;}*/ ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -57,34 +57,35 @@
         <!--登录窗口-->
         <ul class="layui-nav fly-nav-user">
 
+            <?php if(!(empty($user) || (($user instanceof \think\Collection || $user instanceof \think\Paginator ) && $user->isEmpty()))): ?>
+            <li class="layui-nav-item">
+                <a class="fly-nav-avatar" href="javascript:;">
+                    <cite class="layui-hide-xs"><?php echo $user; ?></cite>
+                    <img src="https://tva1.sinaimg.cn/crop.0.0.118.118.180/5db11ff4gw1e77d3nqrv8j203b03cweg.jpg">
+                </a>
+                <dl class="layui-nav-child">
+                    <dd><a href="user/set.html"><i class="layui-icon">&#xe620;</i>基本设置</a></dd>
+                    <dd><a href="user/collect.html"><i class="iconfont icon-tongzhi" style="top: 4px;"></i>我的收藏</a></dd>
+                    <hr style="margin: 5px 0;">
+                    <dd><a href="index.html" style="text-align: center;">退出</a></dd>
+                </dl>
+            </li>
+            <?php else: ?>
             <!-- 未登录的状态 -->
             <li class="layui-nav-item">
-                <a class="iconfont icon-touxiang layui-hide-xs" href="user/login.html"></a>
+                <a class="iconfont icon-touxiang layui-hide-xs" href="<?php echo url('index/user/login.html'); ?>"></a>
             </li>
             <li class="layui-nav-item">
-                <a href="index/user/login">登录</a>
+                <a href="<?php echo url('index/user/login'); ?>">登录</a>
             </li>
             <li class="layui-nav-item">
-                <a href="index/user/register">注册</a>
+                <a href="<?php echo url('index/user/register'); ?>">注册</a>
             </li>
             <li class="layui-nav-item layui-hide-xs">
                 <a title="QQ登录" class="iconfont icon-qq"></a>
             </li>
+            <?php endif; ?>
 
-            <!-- 登录后的状态 -->
-            <!--
-             <li class="layui-nav-item">
-              <a class="fly-nav-avatar" href="javascript:;">
-                <cite class="layui-hide-xs">贤心</cite>
-                <img src="https://tva1.sinaimg.cn/crop.0.0.118.118.180/5db11ff4gw1e77d3nqrv8j203b03cweg.jpg">
-              </a>
-              <dl class="layui-nav-child">
-                <dd><a href="user/set.html"><i class="layui-icon">&#xe620;</i>基本设置</a></dd>
-                <dd><a href="user/collect.html"><i class="iconfont icon-tongzhi" style="top: 4px;"></i>我的收藏</a></dd>
-                <hr style="margin: 5px 0;">
-                <dd><a href="index.html" style="text-align: center;">退出</a></dd>
-              </dl>
-            </li>-->
 
         </ul>
     </div>
@@ -183,79 +184,7 @@
 
         </div>
 
-        <!--右边-->
-        <div class="layui-col-md4">
 
-            <!--重点项目-->
-            <div class="fly-panel">
-                <h3 class="fly-panel-title">重点推荐</h3>
-                <ul class="fly-panel-main fly-list-static">
-                    <?php if(is_array($recommendList) || $recommendList instanceof \think\Collection || $recommendList instanceof \think\Paginator): $i = 0; $__LIST__ = $recommendList;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?>
-                        <li>
-                            <a href="#"><?php echo $vo['title']; ?></a>
-                        </li>
-                    <?php endforeach; endif; else: echo "" ;endif; ?>
-                </ul>
-            </div>
-
-            <!--广告-->
-            <div class="fly-panel">
-                <div class="fly-panel-title">
-                    赞助商
-                    <span class="fly-mid"></span>
-                    <a href="" class="fly-link fly-joinad">我要加入</a>
-                </div>
-
-                <div class="fly-panel-main">
-
-                    <!--没有广告的时候显示这个，有则隐藏-->
-                    <a href="#" class="fly-zanzhu fly-ad-rg">
-                        广告位
-                    </a>
-
-                    <!--广告位实际图片-->
-                    <a href="">
-                        <img src="/assets/pc/images/test/banner.jpg" class="fly-ad-img" />
-                    </a>
-
-                </div>
-            </div>
-
-            <!--热门软件-->
-            <div class="fly-panel fly-rank fly-rank-reply">
-                <h3 class="fly-panel-title fly-clear">
-                    <span class="fly-left">热门软件</span>
-                    <a href="sub/software.html" class="fly-right">更多</a>
-                </h3>
-                <dl>
-                    <?php if(is_array($softwareList) || $softwareList instanceof \think\Collection || $softwareList instanceof \think\Paginator): $i = 0; $__LIST__ = $softwareList;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?>
-                        <dd>
-                            <a href='#'>
-                                <img src="<?php echo $vo['url']; ?>"><i><?php echo $vo['name']; ?></i>
-                            </a>
-                        </dd>
-                    <?php endforeach; endif; else: echo "" ;endif; ?>
-                </dl>
-            </div>
-
-            <!--友情链接-->
-            <div class="fly-panel fly-link">
-                <h3 class="fly-panel-title">友情链接</h3>
-                <dl class="fly-panel-main">
-                    <?php if(is_array($linkList) || $linkList instanceof \think\Collection || $linkList instanceof \think\Paginator): $i = 0; $__LIST__ = $linkList;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?>
-                     <dd><a href="<?php echo $vo['link_url']; ?>" target="_blank"><?php echo $vo['name']; ?></a></dd>
-                    <?php endforeach; endif; else: echo "" ;endif; ?>
-                    <dd><a href="#" class="fly-link">申请友链</a></dd>
-                </dl>
-            </div>
-
-            <!--加入qq粉丝群-->
-            <div class="fly-panel fly-us-code" style="">
-                <img src="/assets/pc/images/test/pay.jpg" alt="99羊毛">
-                <p>QQ 扫码加入 99羊毛官方群</p>
-            </div>
-
-        </div>
 
     </div>
 
