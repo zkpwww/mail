@@ -275,6 +275,63 @@ class Auth
     }
 
     /**
+     * 修改用户名
+     * @param $username
+     * @return bool
+     */
+    public function changeUsername($username)
+    {
+        if (!$this->_logined) {
+            $this->setError('You are not logged in');
+            return false;
+        }
+        //判断旧密码是否正确
+            Db::startTrans();
+            try {
+                $this->_user->save(['loginfailure' => 0, 'username' => $username]);
+
+                Token::delete($this->_token);
+                //修改密码成功的事件
+                Hook::listen("user_changeusername_successed", $this->_user);
+                Db::commit();
+            } catch (Exception $e) {
+                Db::rollback();
+                $this->setError($e->getMessage());
+                return false;
+            }
+            return true;
+    }
+
+    /**
+     * 修改用户头像
+     * @param $avatar
+     * @return bool
+     */
+    public function changeavatar($avatar)
+    {
+        if (!$this->_logined) {
+            $this->setError('You are not logged in');
+            return false;
+        }
+        //判断旧密码是否正确
+        Db::startTrans();
+        try {
+            $this->_user->save(['loginfailure' => 0, 'avatar' => $avatar]);
+
+            Token::delete($this->_token);
+            //修改密码成功的事件
+            Hook::listen("user_changeavatar_successed", $this->_user);
+            Db::commit();
+        } catch (Exception $e) {
+            Db::rollback();
+            $this->setError($e->getMessage());
+            return false;
+        }
+        return true;
+
+    }
+
+    /**
      * 直接登录账号
      * @param int $user_id
      * @return boolean

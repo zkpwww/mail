@@ -2,7 +2,61 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="764c3d69-f30f-4001-bde6-0196c2311985" name="Default Changelist" comment="增加文章数据库模型">
+<<<<<<< Updated upstream
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+=======
+      <change afterPath="$PROJECT_DIR$/blogs/addons/markdown/Markdown.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blogs/addons/markdown/assets/css/bootstrap-markdown.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blogs/addons/markdown/assets/js/bootstrap-markdown.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blogs/addons/markdown/assets/js/hyperdown.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blogs/addons/markdown/assets/js/jquery.pasteupload.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blogs/addons/markdown/bootstrap.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blogs/addons/markdown/info.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blogs/application/admin/controller/Blogroll.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blogs/application/admin/controller/Software.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blogs/application/admin/view/blogroll/add.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blogs/application/admin/view/blogroll/edit.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blogs/application/admin/view/blogroll/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blogs/application/admin/view/software/add.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blogs/application/admin/view/software/edit.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blogs/application/admin/view/software/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blogs/application/common/model/Blogroll.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blogs/application/common/model/Software.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blogs/application/index/controller/Article.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blogs/application/index/view/article/detail.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blogs/application/index/view/layout/index_default.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blogs/public/assets/addons/markdown/css/bootstrap-markdown.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blogs/public/assets/addons/markdown/js/bootstrap-markdown.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blogs/public/assets/addons/markdown/js/hyperdown.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blogs/public/assets/addons/markdown/js/jquery.pasteupload.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blogs/public/assets/js/backend/blogroll.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blogs/public/assets/js/backend/software.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blogs/public/uploads/20200109/4e229d0d27f4956dd6537c4df2359f68.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blogs/public/uploads/20200109/c8feecca1c4cd29b42cb722ec865ec1f.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blogs/runtime/log/202001/07.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blogs/runtime/log/202001/08.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blogs/runtime/log/202001/09.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blogs/runtime/temp/00ed7c9fe2b5ddba4ca84ef5b0005092.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blogs/runtime/temp/7208c715e342c1c419eb43eb0c52091f.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.ignore" beforeDir="false" afterPath="$PROJECT_DIR$/.ignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blogs/addons/summernote/config.php" beforeDir="false" afterPath="$PROJECT_DIR$/blogs/addons/markdown/config.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blogs/addons/summernote/controller/Index.php" beforeDir="false" afterPath="$PROJECT_DIR$/blogs/addons/markdown/controller/Index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blogs/application/admin/controller/article/Article.php" beforeDir="false" afterPath="$PROJECT_DIR$/blogs/application/admin/controller/article/Article.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blogs/application/admin/view/slide/add.html" beforeDir="false" afterPath="$PROJECT_DIR$/blogs/application/admin/view/slide/add.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blogs/application/admin/view/slide/edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/blogs/application/admin/view/slide/edit.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blogs/application/common/model/Article.php" beforeDir="false" afterPath="$PROJECT_DIR$/blogs/application/common/model/Article.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blogs/application/extra/addons.php" beforeDir="false" afterPath="$PROJECT_DIR$/blogs/application/extra/addons.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blogs/application/index/controller/Index.php" beforeDir="false" afterPath="$PROJECT_DIR$/blogs/application/index/controller/Index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blogs/application/index/view/common/meta.html" beforeDir="false" afterPath="$PROJECT_DIR$/blogs/application/index/view/common/meta.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blogs/application/index/view/common/script.html" beforeDir="false" afterPath="$PROJECT_DIR$/blogs/application/index/view/common/script.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blogs/application/index/view/common/sidenav.html" beforeDir="false" afterPath="$PROJECT_DIR$/blogs/application/index/view/common/sidenav.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blogs/application/index/view/index/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/blogs/application/index/view/index/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blogs/public/assets/js/addons.js" beforeDir="false" afterPath="$PROJECT_DIR$/blogs/public/assets/js/addons.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blogs/public/assets/js/backend/article/article.js" beforeDir="false" afterPath="$PROJECT_DIR$/blogs/public/assets/js/backend/article/article.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blogs/public/assets/js/backend/slide.js" beforeDir="false" afterPath="$PROJECT_DIR$/blogs/public/assets/js/backend/slide.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blogs/runtime/temp/2bc828d4ba26f186511dd959a2071dda.php" beforeDir="false" afterPath="$PROJECT_DIR$/blogs/runtime/temp/4fbaac152d501798ea69b8dd4cbe148a.php" afterDir="false" />
+>>>>>>> Stashed changes
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -18,7 +72,11 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/blogs/application/index/controller/Index.php">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< Updated upstream
             <state relative-caret-position="483">
+              <caret line="30" column="8" selection-start-line="30" selection-start-column="8" selection-end-line="30" selection-end-column="100" />
+=======
+            <state relative-caret-position="690">
               <caret line="30" column="8" selection-start-line="30" selection-start-column="8" selection-end-line="30" selection-end-column="100" />
             </state>
           </provider>
@@ -29,29 +87,64 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="897">
               <caret line="39" column="72" selection-start-line="39" selection-start-column="72" selection-end-line="39" selection-end-column="72" />
+>>>>>>> Stashed changes
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+<<<<<<< Updated upstream
+        <entry file="file://$PROJECT_DIR$/blogs/application/index/view/index/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="897">
+              <caret line="39" column="72" selection-start-line="39" selection-start-column="72" selection-end-line="39" selection-end-column="72" />
+=======
         <entry file="file://$PROJECT_DIR$/blogs/application/common/model/Article.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="943">
               <caret line="46" column="45" selection-start-line="46" selection-start-column="36" selection-end-line="46" selection-end-column="45" />
+>>>>>>> Stashed changes
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+<<<<<<< Updated upstream
+        <entry file="file://$PROJECT_DIR$/blogs/application/common/model/Article.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="943">
+              <caret line="46" column="45" selection-start-line="46" selection-start-column="36" selection-end-line="46" selection-end-column="45" />
+=======
         <entry file="file://$PROJECT_DIR$/blogs/application/index/controller/Article.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="506">
               <caret line="27" column="37" selection-start-line="27" selection-start-column="37" selection-end-line="27" selection-end-column="37" />
+>>>>>>> Stashed changes
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+<<<<<<< Updated upstream
+        <entry file="file://$PROJECT_DIR$/blogs/application/index/controller/Article.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="506">
+              <caret line="27" column="37" selection-start-line="27" selection-start-column="37" selection-end-line="27" selection-end-column="37" />
+=======
+        <entry file="file://$PROJECT_DIR$/blogs/application/admin/controller/article/Article.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="414">
+              <caret line="24" column="31" selection-start-line="24" selection-start-column="22" selection-end-line="24" selection-end-column="31" />
+              <folding>
+                <element signature="e#139#173#0#PHP" expanded="true" />
+              </folding>
+>>>>>>> Stashed changes
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+<<<<<<< Updated upstream
         <entry file="file://$PROJECT_DIR$/blogs/application/admin/controller/article/Article.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="437">
@@ -59,11 +152,18 @@
               <folding>
                 <element signature="e#139#173#0#PHP" expanded="true" />
               </folding>
+=======
+        <entry file="file://$PROJECT_DIR$/blogs/public/assets/js/backend/article/article.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="782">
+              <caret line="34" column="47" selection-start-line="34" selection-start-column="47" selection-end-line="34" selection-end-column="47" />
+>>>>>>> Stashed changes
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+<<<<<<< Updated upstream
         <entry file="file://$PROJECT_DIR$/blogs/public/assets/js/backend/article/article.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="575">
@@ -81,6 +181,12 @@
                 <element signature="n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" />
                 <element signature="n#div#1;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" />
               </folding>
+=======
+        <entry file="file://$PROJECT_DIR$/blogs/application/index/view/article/detail.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="4094">
+              <caret line="178" column="39" selection-start-line="178" selection-start-column="39" selection-end-line="178" selection-end-column="39" />
+>>>>>>> Stashed changes
             </state>
           </provider>
         </entry>
@@ -88,8 +194,13 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/blogs/application/index/view/layout/index_default.html">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< Updated upstream
             <state relative-caret-position="390">
               <caret line="76" column="7" lean-forward="true" selection-start-line="76" selection-start-column="7" selection-end-line="76" selection-end-column="7" />
+=======
+            <state relative-caret-position="391">
+              <caret line="76" column="7" selection-start-line="76" selection-start-column="7" selection-end-line="76" selection-end-column="7" />
+>>>>>>> Stashed changes
               <folding>
                 <element signature="n#style#0;n#li#0;n#ul#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#li#1;n#ul#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -486,6 +597,10 @@
       <workItem from="1578443009650" duration="935000" />
       <workItem from="1578468822349" duration="7685000" />
       <workItem from="1578529408392" duration="10690000" />
+<<<<<<< Updated upstream
+=======
+      <workItem from="1578616856949" duration="704000" />
+>>>>>>> Stashed changes
     </task>
     <task id="LOCAL-00001" summary="增加文章数据库模型">
       <created>1577182177297</created>
@@ -519,13 +634,21 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< Updated upstream
     <option name="totallyTimeSpent" value="64800000" />
+=======
+    <option name="totallyTimeSpent" value="65504000" />
+>>>>>>> Stashed changes
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
     <editor active="true" />
     <layout>
+<<<<<<< Updated upstream
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26012793" />
+=======
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26279318" />
+>>>>>>> Stashed changes
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -556,10 +679,17 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/blogs/html/blob/pc/images/test/banner.png">
       <provider selected="true" editor-type-id="images" />
+<<<<<<< Updated upstream
     </entry>
     <entry file="file://$PROJECT_DIR$/blogs/html/blob/pc/images/test/banner.jpg">
       <provider selected="true" editor-type-id="images" />
     </entry>
+=======
+    </entry>
+    <entry file="file://$PROJECT_DIR$/blogs/html/blob/pc/images/test/banner.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+>>>>>>> Stashed changes
     <entry file="file://$PROJECT_DIR$/blogs/application/admin/view/common/menu.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="230">
@@ -608,11 +738,15 @@
         </state>
       </provider>
     </entry>
+<<<<<<< Updated upstream
     <entry file="file://$PROJECT_DIR$/blogs/runtime/temp/f643d94ce2bbeae6b790ff35d08879a0.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1234" />
       </provider>
     </entry>
+=======
+    <entry file="file://$PROJECT_DIR$/blogs/runtime/temp/f643d94ce2bbeae6b790ff35d08879a0.php" />
+>>>>>>> Stashed changes
     <entry file="file://$PROJECT_DIR$/blogs/application/admin/view/article/category/add.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="184">
@@ -827,6 +961,7 @@
         </state>
       </provider>
     </entry>
+<<<<<<< Updated upstream
     <entry file="file://$PROJECT_DIR$/blogs/public/assets/js/backend/article/article.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="575">
@@ -869,24 +1004,78 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="506">
           <caret line="27" column="37" selection-start-line="27" selection-start-column="37" selection-end-line="27" selection-end-column="37" />
+=======
+    <entry file="file://$PROJECT_DIR$/blogs/application/index/controller/Index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="690">
+          <caret line="30" column="8" selection-start-line="30" selection-start-column="8" selection-end-line="30" selection-end-column="100" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/blogs/application/index/view/index/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="897">
+          <caret line="39" column="72" selection-start-line="39" selection-start-column="72" selection-end-line="39" selection-end-column="72" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/blogs/application/common/model/Article.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="943">
+          <caret line="46" column="45" selection-start-line="46" selection-start-column="36" selection-end-line="46" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/blogs/application/index/controller/Article.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="506">
+          <caret line="27" column="37" selection-start-line="27" selection-start-column="37" selection-end-line="27" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/blogs/application/admin/controller/article/Article.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="24" column="31" selection-start-line="24" selection-start-column="22" selection-end-line="24" selection-end-column="31" />
+          <folding>
+            <element signature="e#139#173#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/blogs/public/assets/js/backend/article/article.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="782">
+          <caret line="34" column="47" selection-start-line="34" selection-start-column="47" selection-end-line="34" selection-end-column="47" />
+>>>>>>> Stashed changes
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/blogs/application/index/view/article/detail.html">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< Updated upstream
         <state relative-caret-position="1817">
           <caret line="178" column="39" lean-forward="true" selection-start-line="178" selection-start-column="39" selection-end-line="178" selection-end-column="39" />
           <folding>
             <element signature="n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" />
             <element signature="n#div#1;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" />
           </folding>
+=======
+        <state relative-caret-position="4094">
+          <caret line="178" column="39" selection-start-line="178" selection-start-column="39" selection-end-line="178" selection-end-column="39" />
+>>>>>>> Stashed changes
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/blogs/application/index/view/layout/index_default.html">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< Updated upstream
         <state relative-caret-position="390">
           <caret line="76" column="7" lean-forward="true" selection-start-line="76" selection-start-column="7" selection-end-line="76" selection-end-column="7" />
+=======
+        <state relative-caret-position="391">
+          <caret line="76" column="7" selection-start-line="76" selection-start-column="7" selection-end-line="76" selection-end-column="7" />
+>>>>>>> Stashed changes
           <folding>
             <element signature="n#style#0;n#li#0;n#ul#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#li#1;n#ul#0;n#body#0;n#html#0;n#!!top" expanded="true" />

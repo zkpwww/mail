@@ -3,15 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="811b1088-bddc-42df-87fd-8f63ea2f9182" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/common/library/Auth.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/common/library/Auth.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/index/controller/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/index/controller/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/index/view/layout/index_default.html" beforeDir="false" afterPath="$PROJECT_DIR$/application/index/view/layout/index_default.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/index/view/user/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/application/index/view/user/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/index/view/user/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/application/index/view/user/register.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/index/view/user/set.html" beforeDir="false" afterPath="$PROJECT_DIR$/application/index/view/user/set.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/runtime/log/202001/09.log" beforeDir="false" afterPath="$PROJECT_DIR$/runtime/log/202001/09.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/runtime/temp/00ed7c9fe2b5ddba4ca84ef5b0005092.php" beforeDir="false" afterPath="$PROJECT_DIR$/runtime/temp/00ed7c9fe2b5ddba4ca84ef5b0005092.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/runtime/temp/7208c715e342c1c419eb43eb0c52091f.php" beforeDir="false" afterPath="$PROJECT_DIR$/runtime/temp/7208c715e342c1c419eb43eb0c52091f.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -27,8 +20,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/index/controller/User.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="620">
-              <caret line="286" column="5" selection-start-line="286" selection-start-column="5" selection-end-line="286" selection-end-column="5" />
+            <state relative-caret-position="6555">
+              <caret line="308" column="38" selection-start-line="308" selection-start-column="38" selection-end-line="308" selection-end-column="38" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/common/controller/Frontend.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-2415">
+              <caret line="15" column="6" selection-start-line="15" selection-start-column="6" selection-end-line="15" selection-end-column="6" />
             </state>
           </provider>
         </entry>
@@ -42,7 +44,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/index/view/user/set.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="321">
@@ -58,11 +60,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/application/common/library/Auth.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="197" column="38" selection-start-line="197" selection-start-column="30" selection-end-line="197" selection-end-column="38" />
+            <state relative-caret-position="-2163">
+              <caret line="305" column="13" selection-start-line="305" selection-start-column="13" selection-end-line="305" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -91,9 +93,12 @@
     <findStrings>
       <find>账号信息</find>
       <find>collect</find>
+      <find>user_register_successed</find>
+      <find>user_changepwd_successed</find>
     </findStrings>
     <dirStrings>
       <dir>F:\work_else\mail\blogs\application\admin</dir>
+      <dir>F:\work_else\mail\blogs\application</dir>
     </dirStrings>
   </component>
   <component name="Git.Settings">
@@ -111,8 +116,9 @@
         <option value="$PROJECT_DIR$/application/index/view/user/register.html" />
         <option value="$PROJECT_DIR$/application/index/view/user/login.html" />
         <option value="$PROJECT_DIR$/application/index/view/layout/index_default.html" />
-        <option value="$PROJECT_DIR$/application/index/controller/User.php" />
         <option value="$PROJECT_DIR$/application/index/view/user/set.html" />
+        <option value="$PROJECT_DIR$/application/index/controller/User.php" />
+        <option value="$PROJECT_DIR$/application/common/library/Auth.php" />
       </list>
     </option>
   </component>
@@ -150,7 +156,7 @@
       <path value="$PROJECT_DIR$/vendor/mtdowling/cron-expression" />
     </include_path>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="57" />
     <option name="y" value="21" />
     <option name="width" value="1863" />
@@ -178,65 +184,21 @@
               <item name="blogs" type="b2602c69:ProjectViewProjectNode" />
               <item name="blogs" type="462c0819:PsiDirectoryNode" />
               <item name="application" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
+              <item name="common" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="blogs" type="b2602c69:ProjectViewProjectNode" />
               <item name="blogs" type="462c0819:PsiDirectoryNode" />
               <item name="application" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
+              <item name="common" type="462c0819:PsiDirectoryNode" />
+              <item name="behavior" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="blogs" type="b2602c69:ProjectViewProjectNode" />
+              <item name="blogs" type="462c0819:PsiDirectoryNode" />
+              <item name="application" type="462c0819:PsiDirectoryNode" />
+              <item name="common" type="462c0819:PsiDirectoryNode" />
               <item name="controller" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="blogs" type="b2602c69:ProjectViewProjectNode" />
-              <item name="blogs" type="462c0819:PsiDirectoryNode" />
-              <item name="application" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
-              <item name="view" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="blogs" type="b2602c69:ProjectViewProjectNode" />
-              <item name="blogs" type="462c0819:PsiDirectoryNode" />
-              <item name="application" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
-              <item name="view" type="462c0819:PsiDirectoryNode" />
-              <item name="index" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="blogs" type="b2602c69:ProjectViewProjectNode" />
-              <item name="blogs" type="462c0819:PsiDirectoryNode" />
-              <item name="application" type="462c0819:PsiDirectoryNode" />
-              <item name="index" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="blogs" type="b2602c69:ProjectViewProjectNode" />
-              <item name="blogs" type="462c0819:PsiDirectoryNode" />
-              <item name="application" type="462c0819:PsiDirectoryNode" />
-              <item name="index" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="blogs" type="b2602c69:ProjectViewProjectNode" />
-              <item name="blogs" type="462c0819:PsiDirectoryNode" />
-              <item name="application" type="462c0819:PsiDirectoryNode" />
-              <item name="index" type="462c0819:PsiDirectoryNode" />
-              <item name="view" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="blogs" type="b2602c69:ProjectViewProjectNode" />
-              <item name="blogs" type="462c0819:PsiDirectoryNode" />
-              <item name="application" type="462c0819:PsiDirectoryNode" />
-              <item name="index" type="462c0819:PsiDirectoryNode" />
-              <item name="view" type="462c0819:PsiDirectoryNode" />
-              <item name="layout" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="blogs" type="b2602c69:ProjectViewProjectNode" />
-              <item name="blogs" type="462c0819:PsiDirectoryNode" />
-              <item name="application" type="462c0819:PsiDirectoryNode" />
-              <item name="index" type="462c0819:PsiDirectoryNode" />
-              <item name="view" type="462c0819:PsiDirectoryNode" />
-              <item name="user" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -284,15 +246,16 @@
       <workItem from="1583109366925" duration="590000" />
       <workItem from="1583195833801" duration="586000" />
       <workItem from="1583281944686" duration="2709000" />
-      <workItem from="1583368559876" duration="3765000" />
+      <workItem from="1583368559876" duration="7110000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="19427000" />
+    <option name="totallyTimeSpent" value="22772000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23720682" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -427,13 +390,6 @@
     <entry file="file://$PROJECT_DIR$/application/admin/config.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/common/controller/Frontend.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2277">
-          <caret line="105" column="57" selection-start-line="105" selection-start-column="57" selection-end-line="105" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/admin/controller/Category.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="276">
@@ -458,13 +414,6 @@
     <entry file="file://$PROJECT_DIR$/application/config.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/common/library/Auth.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="197" column="38" selection-start-line="197" selection-start-column="30" selection-end-line="197" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/admin/view/index/login.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="805">
@@ -486,13 +435,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/index/controller/User.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="620">
-          <caret line="286" column="5" selection-start-line="286" selection-start-column="5" selection-end-line="286" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/index/view/layout/index_default.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="460">
@@ -511,6 +453,27 @@
             <element signature="n#div#2;n#div#0;n#div#0;n#div#2;n#div#0;n#!!top" />
             <element signature="n#div#0;n#div#2;n#div#0;n#div#0;n#div#2;n#div#0;n#!!top" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/common/controller/Frontend.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2415">
+          <caret line="15" column="6" selection-start-line="15" selection-start-column="6" selection-end-line="15" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/index/controller/User.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="6555">
+          <caret line="308" column="38" selection-start-line="308" selection-start-column="38" selection-end-line="308" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/common/library/Auth.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2163">
+          <caret line="305" column="13" selection-start-line="305" selection-start-column="13" selection-end-line="305" selection-end-column="13" />
         </state>
       </provider>
     </entry>

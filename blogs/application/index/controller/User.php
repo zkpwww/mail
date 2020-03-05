@@ -278,6 +278,44 @@ class User extends Frontend
         return $this->view->fetch();
     }
 
+    public function changeUserName()
+    {
+        if ($this->request->isPost()) {
+            $username= $this->request->post("username");
+            $token = $this->request->post('__token__');
+            $rule = [
+                'username'  => 'require|length:3,30',
+                '__token__'     => 'token',
+            ];
+
+            $msg = [
+                'username.require' => 'Username can not be empty',
+                'username.length'  => 'Username must be 3 to 30 characters',
+            ];
+            $data = [
+                'username'   => $username,
+                '__token__'     => $token,
+            ];
+            $field = [
+                'username'  => $username,
+            ];
+            $validate = new Validate($rule, $msg, $field);
+            $result = $validate->check($data);
+            if (!$result) {
+                $this->error(__($validate->getError()), null, ['token' => $this->request->token()]);
+                return false;
+            }
+
+            $ret = $this->auth->changepwd($newpassword, $oldpassword);
+            if ($ret) {
+                $this->success(__('Reset password successful'), url('user/login'));
+            } else {
+                $this->error($this->auth->getError(), null, ['token' => $this->request->token()]);
+            }
+        }
+        $this->view->assign('title', __('Change password'));
+        return $this->view->fetch();
+    }
     public function collect()
     {
         $this->view->assign('title', __('我的收藏'));
